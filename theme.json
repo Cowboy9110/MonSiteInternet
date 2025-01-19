@@ -1,0 +1,22 @@
+
+{
+  "variant": "professional",
+  "appearance": "dark",
+  "primary": "hsl(220 85% 60%)",
+  "secondary": "hsl(220 85% 30%)",
+  "accent": "hsl(340 85% 60%)",
+  "background": "hsl(220 15% 10%)",
+  "foreground": "hsl(0 0% 95%)",
+  "muted": "hsl(220 15% 20%)",
+  "border": "hsl(220 15% 25%)",
+  "radius": 0.5,
+  "hover": {
+    "primary": "hsl(220 85% 65%)",
+    "secondary": "hsl(220 85% 35%)",
+    "muted": "hsl(220 15% 25%)",
+    "accent": "hsl(340 85% 65%)"
+  },
+  "focus": {
+    "ring": "hsl(220 85% 70%)"
+  }
+}

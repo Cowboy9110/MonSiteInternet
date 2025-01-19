@@ -1,0 +1,51 @@
+Crée un site web moderne, inspiré des interfaces élégantes et minimalistes des sites comme Tesla ou x.ai. Le site doit contenir les éléments suivants :
+	1.	Page principale (CV) :
+	•	Affiche les informations suivantes extraites de mon CV :
+	•	Nom : Bouzalmata Imad
+	•	Adresse : 46 Chemin des Lorittes, 91100 Corbeil-Essonnes
+	•	Téléphone : 0761731256
+	•	E-mail : imad.bouzalmata@gmail.com
+	•	Permis : Permis de conduire B
+	•	LinkedIn : Lien LinkedIn
+	•	Langues : Français (langue maternelle), Anglais (avancé), Espagnol (intermédiaire)
+	•	Loisirs :
+	•	Joueur international de kayak-polo
+	•	Développement de jeux vidéo et de sites internet
+	•	Expérience professionnelle :
+	•	Pompier industriel, Fiducial SH, Corbeil-Essonnes (fév. 2023 - présent)
+	•	Conducteur de travaux BTP, Eiffage, Villejuif (sept. 2022 - sept. 2023)
+	•	Apprenti expert métallurgiste, GRTgaz, Compiègne (août 2020 - sept. 2022)
+	•	Formation scolaire :
+	•	Bac STI2D, mention Très Bien (2018 - 2020), Lycée Robert Doisneau, Corbeil-Essonnes
+	•	DUT Science et Génie des Matériaux (2020 - 2022), Université Sorbonne Paris-Nord
+	•	Compétences :
+	•	Python, HTML/CSS/JavaScript, Lua (expertise variable selon le CV)
+	•	Certificat :
+	•	Monteur vidéo (Premiere Pro et After Effects, 2025, École des Vidéastes)
+	•	Divers :
+	•	SST, PSE1/PSE2, Sapeur-Pompier Volontaire
+	•	Affiche une photo personnelle en haut à gauche, comme sur le CV fourni.
+	•	Ajoute une brève introduction : “Passionné par l’informatique et le montage vidéo, je suis à la recherche d’opportunités pour développer mes compétences et contribuer activement à des projets innovants.”
+	2.	Portfolio :
+	•	Sépare le portfolio en deux onglets :
+	•	Informatique :
+	•	Liste des projets liés au développement (jeux vidéo, sites internet, etc.).
+	•	Montage vidéo :
+	•	Liste des projets vidéo avec des miniatures et des descriptions.
+	•	Ajoute un système de commentaires sous chaque projet pour que les visiteurs puissent laisser des retours.
+	3.	Page Contact :
+	•	Inclut un formulaire de contact avec les champs suivants :
+	•	Nom
+	•	E-mail
+	•	Message
+	•	Configure le formulaire pour envoyer les messages directement à l’adresse e-mail imad.bouzalmata@gmail.com.
+	4.	Design et style :
+	•	Le site doit être moderne, épuré et responsive.
+	•	Utilise une palette de couleurs sobres et élégantes (blanc, noir, gris, avec des touches subtiles de jaune pour rappeler le design du CV).
+	•	Intègre une navigation intuitive avec une barre de menu fixe pour accéder rapidement aux pages (CV, Portfolio, Contact).
+	•	Ajoute des animations légères pour rendre l’expérience utilisateur fluide et agréable.
+
+Langages et technologies suggérés :
+	•	HTML, CSS (ou Tailwind CSS pour un design moderne), JavaScript pour l’interactivité.
+	•	Utilise une solution comme Node.js ou PHP pour le formulaire de contact.
+	•	Si nécessaire, ajoute une base de données légère pour le stockage des commentaires (ex. SQLite ou Firebase).
