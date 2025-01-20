@@ -3,7 +3,7 @@ import { createServer } from "http";
 import { logger } from "../utils/logger";
 import { AnyZodObject, z } from "zod";
 import { db } from "@db";
-import { projects, comments } from "@db/schema";
+import { projects, comments } from "../models/schema";
 import { eq } from "drizzle-orm";
 import path from "path";
 
