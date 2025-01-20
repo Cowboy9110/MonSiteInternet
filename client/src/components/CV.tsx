@@ -133,10 +133,10 @@ export default function CV() {
 
               <div className="space-y-4">
                 <p className="text-lg text-foreground/80 leading-relaxed">
-                  Passionné par les nouvelles technologies et l'innovation numérique, j'ai développé plusieurs projets créatifs comme des applications web et des expériences de jeu en ligne.
+                  Passionné par la neuro-ergonomie, la blockchain, la cybersécurité et l'intelligence artificielle, j'ai exploré des domaines variés à travers des projets comme des serveurs de jeu en ligne et des sites web.
                 </p>
                 <p className="text-lg text-foreground/80 leading-relaxed">
-                  Mon parcours unique combine développement web et engagement citoyen, enrichi par mon expérience de sportif de haut niveau et de pompier volontaire, démontrant ma capacité à travailler en équipe et à relever des défis.
+                  Je m'intéresse particulièrement aux interactions Homme-machine et aux solutions numériques sécurisées, tout en cultivant rigueur et esprit d'équipe grâce à mon expérience de sportif de haut niveau et de pompier volontaire.
                 </p>
               </div>
 
