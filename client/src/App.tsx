@@ -1,27 +1,38 @@
+
 import { Switch, Route, useLocation } from "wouter";
-import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
+import { AnimatePresence, motion } from "framer-motion";
+import { queryClient } from "./lib/queryClient";
 import { Toaster } from "@/components/ui/toaster";
 import Navigation from "./components/Navigation";
 import Home from "@/pages/Home";
 import Contact from "@/pages/Contact";
 import Admin from "@/pages/Admin";
 import NotFound from "@/pages/not-found";
-import { AnimatePresence, motion } from "framer-motion";
 
 const pageVariants = {
-  initial: { opacity: 0, y: 20, scale: 0.98 },
+  initial: { 
+    opacity: 0, 
+    y: 20, 
+    scale: 0.98 
+  },
   animate: { 
     opacity: 1, 
     y: 0, 
     scale: 1,
-    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] }
+    transition: { 
+      duration: 0.5, 
+      ease: [0.22, 1, 0.36, 1] 
+    }
   },
   exit: { 
     opacity: 0, 
     y: -20, 
     scale: 0.98,
-    transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] }
+    transition: { 
+      duration: 0.4, 
+      ease: [0.22, 1, 0.36, 1] 
+    }
   }
 };
 
@@ -37,6 +48,12 @@ const PageWrapper = ({ children }: { children: React.ReactNode }) => (
   </motion.div>
 );
 
+const routes = [
+  { path: "/", component: Home },
+  { path: "/contact", component: Contact },
+  { path: "/admin", component: Admin }
+];
+
 function App() {
   const [location] = useLocation();
 
@@ -45,20 +62,25 @@ function App() {
       <div className="min-h-screen bg-background font-roboto relative overflow-hidden">
         <div className="fixed inset-0 bg-gradient-to-br from-background to-background/80 pointer-events-none" />
         <Navigation />
+        
         <main className="container mx-auto px-6 pt-28 pb-16 relative">
           <AnimatePresence mode="wait" initial={false}>
             <Switch location={location} key={location}>
-              <Route path="/" component={() => (
-                <PageWrapper><Home /></PageWrapper>
-              )} />
-              <Route path="/contact" component={() => (
-                <PageWrapper><Contact /></PageWrapper>
-              )} />
-              <Route path="/admin" component={() => (
-                <PageWrapper><Admin /></PageWrapper>
-              )} />
+              {routes.map(({ path, component: Component }) => (
+                <Route 
+                  key={path}
+                  path={path} 
+                  component={() => (
+                    <PageWrapper>
+                      <Component />
+                    </PageWrapper>
+                  )} 
+                />
+              ))}
               <Route component={() => (
-                <PageWrapper><NotFound /></PageWrapper>
+                <PageWrapper>
+                  <NotFound />
+                </PageWrapper>
               )} />
             </Switch>
           </AnimatePresence>
