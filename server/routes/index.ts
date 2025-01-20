@@ -1,6 +1,6 @@
 import type { Express, Request, Response, NextFunction } from "express";
 import { createServer } from "http";
-import { logger } from "./utils/logger";
+import { logger } from "../utils/logger";
 import { AnyZodObject, z } from "zod";
 import { db } from "@db";
 import { projects, comments } from "@db/schema";
