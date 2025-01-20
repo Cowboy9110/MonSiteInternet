@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import ProjectCard from "@/components/ProjectCard";
+import ProjectCard from "@/features/portfolio/ProjectCard";
 import { type Project } from "@db/schema";
 
 export default function Portfolio() {
