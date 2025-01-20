@@ -1,0 +1,37 @@
+project/
+├── client/                     # Frontend de l'application
+│   ├── public/                 # Fichiers statiques accessibles directement
+│   ├── src/                    # Code source React
+│   │   ├── components/         # Composants réutilisables
+│   │   ├── features/           # Fonctionnalités spécifiques (ex : CV, Portfolio)
+│   │   ├── pages/              # Pages principales (Home, Contact, etc.)
+│   │   ├── hooks/              # Hooks React personnalisés
+│   │   ├── lib/                # Utilitaires et configuration (ex : API client)
+│   │   ├── styles/             # Fichiers CSS/SCSS ou Tailwind configuration
+│   │   ├── App.tsx             # Composant racine
+│   │   └── main.tsx            # Point d'entrée React
+│   └── vite.config.ts          # Configuration Vite
+│
+├── server/                     # Backend de l'application
+│   ├── routes/                 # Routes API (groupées par ressource)
+│   ├── controllers/            # Logique métier pour chaque ressource
+│   ├── models/                 # Modèles de données (avec Drizzle ORM)
+│   ├── middlewares/            # Middlewares (authentification, validation, etc.)
+│   ├── utils/                  # Utilitaires backend (logger, helpers)
+│   ├── index.ts                # Point d'entrée backend
+│   └── config/                 # Configuration (base de données, variables d'environnement)
+│
+├── db/                         # Configuration base de données
+│   ├── migrations/             # Fichiers de migration
+│   ├── schema.ts               # Définition des tables avec Drizzle ORM
+│   └── index.ts                # Connexion à la base de données
+│
+├── docker/                     # Fichiers Docker spécifiques
+│   ├── Dockerfile.client       # Dockerfile pour le frontend
+│   ├── Dockerfile.server       # Dockerfile pour le backend
+│   └── docker-compose.yml      # Configuration Docker Compose
+│
+├── .env                        # Variables d'environnement
+├── package.json                # Dépendances globales
+├── README.md                   # Documentation du projet
+└── tsconfig.json               # Configuration TypeScript
