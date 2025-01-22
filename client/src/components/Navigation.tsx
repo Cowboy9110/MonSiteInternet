@@ -1,4 +1,3 @@
-
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
 import { Download, ChevronDown } from "lucide-react";
@@ -92,35 +91,40 @@ export default function Navigation() {
             </motion.div>
           ))}
 
-          <motion.div variants={buttonVariants}>
+          <motion.div variants={buttonVariants} className="flex flex-col items-center space-y-2 md:flex-row md:space-y-0 md:space-x-4">
             <a
               href="/CV_Imad_Bouzalmata.pdf"
               download="CV_Imad_Bouzalmata.pdf"
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleDownloadCV}
+              className="h-9"
             >
               <Button
                 variant="outline"
                 size="sm"
-                className="bg-background hover:scale-105 transition-transform duration-200 text-foreground hover:bg-background hover:text-foreground h-9"
+                className="bg-background hover:scale-105 transition-transform duration-200 text-foreground hover:bg-background hover:text-foreground h-full"
               >
                 <Download className="h-4 w-4 mr-2" />
                 Télécharger mon CV
               </Button>
             </a>
-            
+
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="sm" className="ml-2 bg-background hover:scale-105 transition-transform duration-200 text-foreground hover:bg-background hover:text-foreground h-9">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="bg-background hover:scale-105 transition-transform duration-200 text-foreground hover:bg-background hover:text-foreground h-9"
+                >
                   Lettres de recommandation
                   <ChevronDown className="ml-2 h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuItem asChild>
-                  <a 
-                    href="/attached_assets/Lettre recommandation Imad GRTgaz.pdf" 
+                  <a
+                    href="/attached_assets/Lettre recommandation Imad GRTgaz.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -128,8 +132,8 @@ export default function Navigation() {
                   </a>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <a 
-                    href="/attached_assets/Lettre recommandation Imad Fiducial.pdf" 
+                  <a
+                    href="/attached_assets/Lettre recommandation Imad Fiducial.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
