@@ -59,10 +59,14 @@ export default function Contact() {
         description: "Votre message a été envoyé avec succès",
       });
     },
-    onError: (error: Error) => {
+    onError: (error: unknown) => {
+      const errorMessage = error instanceof Error 
+        ? error.message
+        : "Une erreur est survenue lors de l'envoi du message";
+
       toast({
-        title: "Erreur",
-        description: error.message || "Une erreur est survenue lors de l'envoi du message",
+        title: "Erreur d'envoi",
+        description: errorMessage,
         variant: "destructive",
       });
     },
