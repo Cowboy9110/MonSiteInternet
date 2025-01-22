@@ -1,14 +1,43 @@
-[2025-01-22T13:20:17.152Z] [INFO] Initializing Neon client...
-[2025-01-22T13:20:17.153Z] [INFO] Attempting to connect to database with URL pattern: postgresql://neondb_owner:****@ep-super-sun-a6zq8k5k.us-west-2.aws.neon.tech/neondb?sslmode=require
-[2025-01-22T13:20:17.154Z] [INFO] Neon client created successfully
-[2025-01-22T13:20:17.154Z] [INFO] Initializing Drizzle...
-[2025-01-22T13:20:17.154Z] [INFO] Drizzle instance created successfully
-[2025-01-22T13:20:17.155Z] [INFO] Testing database connection...
-[2025-01-22T13:20:17.218Z] [INFO] Starting server...
-[2025-01-22T13:20:17.218Z] [INFO] Testing database connection...
-[2025-01-22T13:20:18.031Z] [INFO] Database connection established
-[2025-01-22T13:20:18.032Z] [INFO] Ensure database schema is up-to-date...
-[2025-01-22T13:20:18.032Z] [INFO] Setting up routes...
-[2025-01-22T13:20:18.034Z] [INFO] Setting up Vite development server...
-[2025-01-22T13:20:18.072Z] [INFO] Database connection successful. Connected to: {"current_database":"neondb","current_user":"neondb_owner","version":"PostgreSQL 17.2 on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit"}
-[2025-01-22T13:20:18.081Z] [INFO] Server running on http://0.0.0.0:8080
+[2025-01-22T13:21:01.276Z] [INFO] Initializing Neon client...
+[2025-01-22T13:21:01.277Z] [INFO] Attempting to connect to database with URL pattern: postgresql://neondb_owner:****@ep-super-sun-a6zq8k5k.us-west-2.aws.neon.tech/neondb?sslmode=require
+[2025-01-22T13:21:01.278Z] [INFO] Neon client created successfully
+[2025-01-22T13:21:01.278Z] [INFO] Initializing Drizzle...
+[2025-01-22T13:21:01.279Z] [INFO] Drizzle instance created successfully
+[2025-01-22T13:21:01.279Z] [INFO] Testing database connection...
+[2025-01-22T13:21:01.311Z] [INFO] Starting server...
+[2025-01-22T13:21:01.312Z] [INFO] Testing database connection...
+[2025-01-22T13:21:01.587Z] [INFO] Database connection successful. Connected to: {"current_database":"neondb","current_user":"neondb_owner","version":"PostgreSQL 17.2 on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit"}
+[2025-01-22T13:21:01.590Z] [INFO] Database connection established
+[2025-01-22T13:21:01.590Z] [INFO] Ensure database schema is up-to-date...
+[2025-01-22T13:21:01.590Z] [INFO] Setting up routes...
+[2025-01-22T13:21:01.592Z] [INFO] Setting up Vite development server...
+[2025-01-22T13:21:01.631Z] [INFO] Server running on http://0.0.0.0:8080
+[2025-01-22T13:21:34.431Z] [ERROR] Error: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "name"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "email"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "message"
+    ],
+    "message": "Required"
+  }
+]
