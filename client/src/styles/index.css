@@ -17,7 +17,7 @@
     --secondary-foreground: 0 0% 95%; /* Blanc cassé */
     --muted: 220 15% 20%; /* Gris foncé */
     --muted-foreground: 220 10% 70%; /* Gris clair pour les textes secondaires */
-    --accent: 340 85% 60%; /* Rose magenta pour accents */
+    --accent: 220 85% 60%; /* Bleu accent */
     --accent-foreground: 0 0% 100%; /* Blanc pur */
     --border: 220 15% 25%; /* Gris moyen */
     --input: 220 15% 20%; /* Gris foncé */
@@ -27,7 +27,7 @@
     --hover-primary: 220 85% 65%; /* Bleu clair au survol */
     --hover-secondary: 220 85% 35%; /* Bleu moyen au survol */
     --hover-muted: 220 15% 25%; /* Gris légèrement plus clair au survol */
-    --hover-accent: 340 85% 65%; /* Rose magenta clair au survol */
+    --hover-accent: 220 85% 65%; /* Bleu clair au survol */
     --focus-ring: 220 85% 70%; /* Bleu clair pour focus */
   }
 

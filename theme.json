@@ -4,7 +4,7 @@
   "appearance": "dark",
   "primary": "hsl(220 85% 60%)",
   "secondary": "hsl(220 85% 30%)",
-  "accent": "hsl(340 85% 60%)",
+  "accent": "hsl(220 85% 60%)",
   "background": "hsl(220 15% 10%)",
   "foreground": "hsl(0 0% 95%)",
   "muted": "hsl(220 15% 20%)",
