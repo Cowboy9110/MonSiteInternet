@@ -102,7 +102,7 @@ export default function Navigation() {
                 className="hover:bg-primary/10"
               >
                 <Download className="h-4 w-4 mr-2" />
-                CV
+                Télécharger mon CV
               </Button>
             </a>
           </motion.div>
