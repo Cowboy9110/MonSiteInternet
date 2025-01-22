@@ -1,0 +1,49 @@
+Checklist pour corriger un formulaire de contact en React/TypeScript
+Côté Frontend :
+
+Vérifier que le formulaire utilise correctement react-hook-form et que chaque champ est bien connecté à son FormField.
+S'assurer que le schéma de validation avec Zod correspond aux exigences attendues (e.g., champ name avec 2 caractères minimum, email valide, message avec 10 caractères minimum).
+Vérifier les importations des composants (Input, Textarea, Button, etc.) et des hooks (useToast, useMutation) pour éviter les erreurs de chemin ou de dépendances.
+Contrôler le bouton d'envoi :
+Vérifier que l'état disabled s'active correctement pendant la mutation (mutation.isPending).
+Ajouter un feedback visuel pour l'état de chargement (e.g., spinner, texte comme "Envoi en cours...").
+Tester que la fonction onSubmit passe bien les données du formulaire au mutation.mutate.
+Requête API (fetch) :
+
+Vérifier que l'URL /api/contact pointe vers le bon endpoint backend.
+Assurer que les en-têtes HTTP contiennent "Content-Type": "application/json".
+Vérifier que la réponse API retourne un code HTTP valide (200 ou autre en cas d'erreur) :
+Si !response.ok, afficher un message d'erreur utilisateur avec la description retournée par l'API (response.text()).
+Gérer les erreurs réseau avec un message générique dans un bloc catch.
+Gestion des erreurs dans la mutation :
+
+Personnaliser les messages d'erreur avec onError, en détectant si l'erreur est une instance d'Error.
+Utiliser un toast destructif (variant: "destructive") pour alerter l'utilisateur des problèmes.
+Côté Backend (API) :
+
+Vérifier que l'endpoint /api/contact accepte bien les requêtes POST.
+Contrôler que les données envoyées (name, email, message) sont bien validées et traitées.
+Assurer que l'API renvoie des réponses HTTP claires :
+200 pour un succès.
+400 pour des données invalides.
+405 pour des méthodes non autorisées.
+500 pour une erreur serveur.
+Ajouter des logs dans le backend pour identifier les erreurs côté serveur.
+Tests :
+
+Tester le formulaire avec différents types d'entrées :
+Champs vides.
+Adresse email invalide.
+Message trop court.
+Vérifier les réponses toast pour succès et erreur.
+Tester la soumission du formulaire en mode hors ligne pour s’assurer que l'erreur réseau est gérée.
+Inspecter les outils de développement :
+
+Vérifier la console du navigateur pour des erreurs JS ou warnings.
+Utiliser l'onglet Network pour observer la requête HTTP : URL, méthode, en-têtes, charge utile (payload), et réponse.
+Surveiller les logs serveur pour des erreurs ou des comportements inattendus.
+Optionnel :
+
+Ajouter une gestion de reCaptcha pour limiter le spam.
+Assurer l'accessibilité (labels associés, structure claire pour les lecteurs d'écran).
+Ajouter des tests unitaires pour les composants et les fonctions critiques.
