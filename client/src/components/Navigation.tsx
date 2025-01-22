@@ -124,20 +124,18 @@ export default function Navigation() {
               <DropdownMenuContent>
                 <DropdownMenuItem asChild>
                   <a
-                    href="/attached_assets/Lettre recommandation Imad GRTgaz.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:bg-foreground hover:text-background transition-colors"
+                    href="/Lettre recommandation Imad GRTgaz.pdf"
+                    download="Lettre recommandation Imad GRTgaz.pdf"
+                    className="w-full hover:bg-foreground hover:text-background transition-colors duration-200"
                   >
                     Recommandation GRTgaz
                   </a>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <a
-                    href="/attached_assets/Lettre recommandation Imad Fiducial.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:bg-foreground hover:text-background transition-colors"
+                    href="/Lettre recommandation Imad Fiducial.pdf"
+                    download="Lettre recommandation Imad Fiducial.pdf"
+                    className="w-full hover:bg-foreground hover:text-background transition-colors duration-200"
                   >
                     Recommandation Fiducial
                   </a>
