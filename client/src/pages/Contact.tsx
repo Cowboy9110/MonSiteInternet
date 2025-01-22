@@ -35,6 +35,7 @@ export default function Contact() {
       email: "",
       message: "",
     },
+    mode: "onTouched",
   });
 
   const mutation = useMutation({
