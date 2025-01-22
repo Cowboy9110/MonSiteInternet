@@ -27,6 +27,11 @@ export default function Contact() {
   const { toast } = useToast();
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: '',
+      email: '',
+      message: ''
+    }
   });
 
   const mutation = useMutation({

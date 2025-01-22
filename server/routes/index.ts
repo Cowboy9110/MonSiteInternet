@@ -1,3 +1,6 @@
+
+import nodemailer from 'nodemailer';
+
 import type { Express, Request, Response, NextFunction } from "express";
 import { createServer } from "http";
 import { logger } from "../utils/logger";
@@ -102,7 +105,20 @@ export function registerRoutes(app: Express) {
       const { name, email, message } = req.body;
       logger.log(`Contact form submission from ${name} (${email}): ${message}`);
       
-      // Here you could add code to send email or store in database
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: process.env.EMAIL_USER,
+          pass: process.env.EMAIL_PASSWORD
+        }
+      });
+
+      await transporter.sendMail({
+        from: process.env.EMAIL_USER,
+        to: process.env.EMAIL_USER,
+        subject: `Nouveau message de ${name}`,
+        text: `Message de ${name} (${email}):\n\n${message}`
+      });
       
       res.status(200).json({ 
         success: true,
