@@ -94,16 +94,26 @@ export function registerRoutes(app: Express) {
 
   // Contact form route
   app.post("/api/contact", validateRequest(z.object({
-    name: z.string(),
-    email: z.string().email(),
-    message: z.string(),
+    name: z.string().min(2, "Le nom doit contenir au moins 2 caractères"),
+    email: z.string().email("Adresse email invalide"),
+    message: z.string().min(10, "Le message doit contenir au moins 10 caractères"),
   })), async (req, res) => {
     try {
-      logger.log(`Contact form submission: ${JSON.stringify(req.body)}`);
-      res.json({ message: "Message received successfully" });
+      const { name, email, message } = req.body;
+      logger.log(`Contact form submission from ${name} (${email}): ${message}`);
+      
+      // Here you could add code to send email or store in database
+      
+      res.status(200).json({ 
+        success: true,
+        message: "Message reçu avec succès" 
+      });
     } catch (error) {
       logger.log(`Failed to process contact form: ${error}`, "error");
-      res.status(500).json({ message: "Failed to process message" });
+      res.status(500).json({ 
+        success: false,
+        message: "Une erreur est survenue lors de l'envoi du message" 
+      });
     }
   });
 

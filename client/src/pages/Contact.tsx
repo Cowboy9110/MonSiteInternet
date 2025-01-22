@@ -37,11 +37,12 @@ export default function Contact() {
         body: JSON.stringify(data),
       });
       
+      const result = await response.json();
       if (!response.ok) {
-        throw new Error("Failed to send message");
+        throw new Error(result.message || "Erreur lors de l'envoi du message");
       }
       
-      return response.json();
+      return result;
     },
     onSuccess: () => {
       form.reset();
