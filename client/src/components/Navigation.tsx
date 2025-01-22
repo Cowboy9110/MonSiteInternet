@@ -103,7 +103,7 @@ export default function Navigation() {
               <Button
                 variant="outline"
                 size="sm"
-                className="bg-background hover:scale-105 transition-transform duration-200"
+                className="bg-background hover:scale-105 transition-transform duration-200 text-foreground hover:bg-background hover:text-foreground h-9"
               >
                 <Download className="h-4 w-4 mr-2" />
                 Télécharger mon CV
@@ -112,7 +112,7 @@ export default function Navigation() {
             
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="sm" className="ml-2 bg-background hover:scale-105 transition-transform duration-200">
+                <Button variant="outline" size="sm" className="ml-2 bg-background hover:scale-105 transition-transform duration-200 text-foreground hover:bg-background hover:text-foreground h-9">
                   Lettres de recommandation
                   <ChevronDown className="ml-2 h-4 w-4" />
                 </Button>
