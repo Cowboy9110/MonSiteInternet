@@ -15,6 +15,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import { Loader2 } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, "Le nom doit contenir au moins 2 caractères"),
@@ -45,7 +46,8 @@ export default function Contact() {
       });
 
       if (!response.ok) {
-        throw new Error("Erreur lors de l'envoi");
+        const errorText = await response.text();
+        throw new Error(errorText || "Erreur lors de l'envoi");
       }
 
       return response.json();
@@ -57,10 +59,10 @@ export default function Contact() {
         description: "Votre message a été envoyé avec succès",
       });
     },
-    onError: () => {
+    onError: (error: Error) => {
       toast({
         title: "Erreur",
-        description: "Une erreur est survenue lors de l'envoi du message",
+        description: error.message || "Une erreur est survenue lors de l'envoi du message",
         variant: "destructive",
       });
     },
@@ -89,7 +91,11 @@ export default function Contact() {
                 <FormItem>
                   <FormLabel>Nom</FormLabel>
                   <FormControl>
-                    <Input placeholder="Votre nom" {...field} />
+                    <Input 
+                      placeholder="Votre nom" 
+                      {...field} 
+                      disabled={mutation.isPending}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -103,7 +109,12 @@ export default function Contact() {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input type="email" placeholder="votre@email.com" {...field} />
+                    <Input 
+                      type="email" 
+                      placeholder="votre@email.com" 
+                      {...field} 
+                      disabled={mutation.isPending}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -121,6 +132,7 @@ export default function Contact() {
                       placeholder="Votre message..."
                       className="min-h-[150px]"
                       {...field}
+                      disabled={mutation.isPending}
                     />
                   </FormControl>
                   <FormMessage />
@@ -133,7 +145,14 @@ export default function Contact() {
               className="w-full"
               disabled={mutation.isPending}
             >
-              {mutation.isPending ? "Envoi en cours..." : "Envoyer"}
+              {mutation.isPending ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Envoi en cours...
+                </>
+              ) : (
+                "Envoyer"
+              )}
             </Button>
           </form>
         </Form>
