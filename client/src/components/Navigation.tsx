@@ -1,9 +1,15 @@
 
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
-import { Download } from "lucide-react";
+import { Download, ChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
 
 type NavLink = {
   href: string;
@@ -105,6 +111,35 @@ export default function Navigation() {
                 Télécharger mon CV
               </Button>
             </a>
+            
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="sm" className="ml-2">
+                  Lettres de recommandation
+                  <ChevronDown className="ml-2 h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem asChild>
+                  <a 
+                    href="/attached_assets/Lettre recommandation Imad GRTgaz.pdf" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Recommandation GRTgaz
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a 
+                    href="/attached_assets/Lettre recommandation Imad Fiducial.pdf" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Recommandation Fiducial
+                  </a>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </motion.div>
         </div>
       </div>
