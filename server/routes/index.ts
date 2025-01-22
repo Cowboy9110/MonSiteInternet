@@ -103,7 +103,7 @@ export function registerRoutes(app: Express) {
   })), async (req, res) => {
     try {
       const { name, email, message } = req.body;
-      logger.log(`Contact form submission from ${name} (${email}): ${message}`);
+      logger.log(`[Contact] New submission from ${name} (${email})`, "info");
       
       const transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -120,17 +120,27 @@ export function registerRoutes(app: Express) {
         text: `Message de ${name} (${email}):\n\n${message}`
       });
       
+      logger.log(`[Contact] Email sent successfully to ${process.env.EMAIL_USER}`, "info");
       res.status(200).json({ 
         success: true,
         message: "Message reçu avec succès" 
       });
     } catch (error) {
-      logger.log(`Failed to process contact form: ${error}`, "error");
+      logger.log(`[Contact] Error processing form: ${error}`, "error");
       res.status(500).json({ 
         success: false,
         message: "Une erreur est survenue lors de l'envoi du message" 
       });
     }
+  });
+
+  // Handle wrong methods
+  app.all("/api/contact", (req, res) => {
+    logger.log(`[Contact] Method not allowed: ${req.method}`, "warn");
+    res.status(405).json({
+      success: false,
+      message: "Méthode non autorisée"
+    });
   });
 
   // CV download route
