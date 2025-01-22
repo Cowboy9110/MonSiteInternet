@@ -133,10 +133,10 @@ export default function CV() {
 
               <div className="space-y-4">
                 <p className="text-lg text-foreground/80 leading-relaxed">
-                  Je suis passionné par des domaines innovants comme la neuro-ergonomie, la blockchain, la cybersécurité et l'intelligence artificielle. Ces intérêts m'ont conduit à réaliser divers projets, notamment la création de serveurs de jeu en ligne et de sites web, où j'ai pu mettre en pratique mes compétences et ma créativité.
+                  Je suis animé par une passion pour des domaines comme la cybersécurité, l’intelligence artificielle et la blockchain. Ces intérêts m’ont permis de concrétiser divers projets, tels que des serveurs de jeu en ligne et des sites web, tout en développant ma créativité et mes compétences techniques.
                 </p>
                 <p className="text-lg text-foreground/80 leading-relaxed">
-                  Mon parcours allie développement et l'engagement citoyen, enrichi par mon expérience de sportif de haut niveau et de pompier volontaire. Ces expériences reflètent ma capacité à collaborer efficacement et à relever des défis avec détermination.
+                  Mon parcours reflète un équilibre entre ma passion pour les technologies numériques et mon engagement citoyen. Fort de mon expérience en tant que sportif de haut niveau et pompier volontaire, j’ai appris à travailler en équipe et à relever des défis ambitieux avec persévérance.
                 </p>
               </div>
 
