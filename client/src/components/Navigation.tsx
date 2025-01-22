@@ -124,18 +124,16 @@ export default function Navigation() {
               <DropdownMenuContent>
                 <DropdownMenuItem asChild>
                   <a
-                    href="/attached_assets/Lettre recommandation Imad GRTgaz.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/Lettre recommandation Imad GRTgaz.pdf"
+                    download="Lettre recommandation Imad GRTgaz.pdf"
                   >
                     Recommandation GRTgaz
                   </a>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <a
-                    href="/attached_assets/Lettre recommandation Imad Fiducial.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/Lettre recommandation Imad Fiducial.pdf"
+                    download="Lettre recommandation Imad Fiducial.pdf"
                   >
                     Recommandation Fiducial
                   </a>
