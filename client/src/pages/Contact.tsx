@@ -60,8 +60,12 @@ export default function Contact() {
     },
   });
 
-  const onSubmit = form.handleSubmit((data) => {
-    mutation.mutate(data);
+  const onSubmit = form.handleSubmit(async (data: FormData) => {
+    try {
+      await mutation.mutateAsync(data);
+    } catch (error) {
+      console.error('Erreur lors de la soumission:', error);
+    }
   });
 
   return (
