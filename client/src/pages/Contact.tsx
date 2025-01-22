@@ -40,6 +40,7 @@ export default function Contact() {
 
   const mutation = useMutation({
     mutationFn: async (data: ContactForm) => {
+      console.log('Form data being sent:', data);
       if (!navigator.onLine) {
         throw new Error("Vous êtes hors ligne. Veuillez vérifier votre connexion internet.");
       }
