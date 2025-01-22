@@ -60,32 +60,17 @@ export default function Contact() {
     },
   });
 
-  const onSubmit = async (data: FormData) => {
+  const onSubmit = form.handleSubmit(async (data) => {
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-      });
-      
-      const result = await response.json();
-      if (!response.ok) {
-        throw new Error(result.message);
-      }
-      
-      toast({
-        title: "Message envoyé",
-        description: "Votre message a été envoyé avec succès."
-      });
-      form.reset();
+      mutation.mutate(data);
     } catch (error) {
       toast({
         title: "Erreur",
-        description: error instanceof Error ? error.message : "Une erreur est survenue",
+        description: "Une erreur est survenue lors de l'envoi du message",
         variant: "destructive"
       });
     }
-  };
+  });
 
   return (
     <div className="container mx-auto px-6 py-16">
