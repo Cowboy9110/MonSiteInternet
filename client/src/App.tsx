@@ -51,9 +51,7 @@ function App() {
               <Route path="/" component={() => (
                 <PageWrapper><Home /></PageWrapper>
               )} />
-              <Route path="/contact" component={() => (
-                <PageWrapper><Contact /></PageWrapper>
-              )} />
+              
               <Route path="/admin" component={() => (
                 <PageWrapper><Admin /></PageWrapper>
               )} />

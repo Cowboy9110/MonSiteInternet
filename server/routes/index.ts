@@ -1,4 +1,3 @@
-
 import nodemailer from 'nodemailer';
 
 import type { Express, Request, Response, NextFunction } from "express";
@@ -95,53 +94,6 @@ export function registerRoutes(app: Express) {
     }
   });
 
-  // Contact form route
-  app.post("/api/contact", validateRequest(z.object({
-    name: z.string().min(2, "Le nom doit contenir au moins 2 caractères"),
-    email: z.string().email("Adresse email invalide"),
-    message: z.string().min(10, "Le message doit contenir au moins 10 caractères"),
-  })), async (req, res) => {
-    try {
-      const { name, email, message } = req.body;
-      logger.log(`[Contact] New submission from ${name} (${email})`, "info");
-      
-      const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: process.env.EMAIL_USER,
-          pass: process.env.EMAIL_PASSWORD
-        }
-      });
-
-      await transporter.sendMail({
-        from: process.env.EMAIL_USER,
-        to: process.env.EMAIL_USER,
-        subject: `Nouveau message de ${name}`,
-        text: `Message de ${name} (${email}):\n\n${message}`
-      });
-      
-      logger.log(`[Contact] Email sent successfully to ${process.env.EMAIL_USER}`, "info");
-      res.status(200).json({ 
-        success: true,
-        message: "Message reçu avec succès" 
-      });
-    } catch (error) {
-      logger.log(`[Contact] Error processing form: ${error}`, "error");
-      res.status(500).json({ 
-        success: false,
-        message: "Une erreur est survenue lors de l'envoi du message" 
-      });
-    }
-  });
-
-  // Handle wrong methods
-  app.all("/api/contact", (req, res) => {
-    logger.log(`[Contact] Method not allowed: ${req.method}`, "warn");
-    res.status(405).json({
-      success: false,
-      message: "Méthode non autorisée"
-    });
-  });
 
   // CV download route
   app.get("/api/download-cv", (req, res) => {
