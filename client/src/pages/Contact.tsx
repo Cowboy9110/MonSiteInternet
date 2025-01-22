@@ -86,6 +86,7 @@ export default function Contact() {
   });
 
   function onSubmit(data: ContactForm) {
+    console.log("Données du formulaire :", data);
     mutation.mutate(data);
   }
 
