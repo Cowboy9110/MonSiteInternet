@@ -16,9 +16,7 @@ type NavLink = {
   label: string;
 };
 
-const navLinks: NavLink[] = [
-  { href: "/", label: "CV" },
-];
+const navLinks: NavLink[] = [];
 
 const navigationVariants = {
   initial: { y: -20, opacity: 0 },
@@ -105,7 +103,7 @@ export default function Navigation() {
               <Button
                 variant="outline"
                 size="sm"
-                className="hover:bg-primary/10"
+                className="bg-background hover:bg-accent hover:text-accent-foreground"
               >
                 <Download className="h-4 w-4 mr-2" />
                 Télécharger mon CV
@@ -114,7 +112,7 @@ export default function Navigation() {
             
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="sm" className="ml-2">
+                <Button variant="outline" size="sm" className="ml-2 bg-background hover:bg-accent hover:text-accent-foreground">
                   Lettres de recommandation
                   <ChevronDown className="ml-2 h-4 w-4" />
                 </Button>
