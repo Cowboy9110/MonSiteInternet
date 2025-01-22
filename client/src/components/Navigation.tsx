@@ -126,6 +126,7 @@ export default function Navigation() {
                   <a
                     href="/Lettre recommandation Imad GRTgaz.pdf"
                     download="Lettre recommandation Imad GRTgaz.pdf"
+                    className="w-full hover:bg-foreground hover:text-background transition-colors"
                   >
                     Recommandation GRTgaz
                   </a>
@@ -134,6 +135,7 @@ export default function Navigation() {
                   <a
                     href="/Lettre recommandation Imad Fiducial.pdf"
                     download="Lettre recommandation Imad Fiducial.pdf"
+                    className="w-full hover:bg-foreground hover:text-background transition-colors"
                   >
                     Recommandation Fiducial
                   </a>
