@@ -65,16 +65,8 @@ export default function Contact() {
     },
   });
 
-  const onSubmit = form.handleSubmit(async (data) => {
-    try {
-      mutation.mutate(data);
-    } catch (error) {
-      toast({
-        title: "Erreur",
-        description: "Une erreur est survenue lors de l'envoi du message",
-        variant: "destructive"
-      });
-    }
+  const onSubmit = form.handleSubmit((data) => {
+    mutation.mutate(data);
   });
 
   return (
