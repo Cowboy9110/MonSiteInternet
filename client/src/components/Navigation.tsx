@@ -12,7 +12,6 @@ type NavLink = {
 
 const navLinks: NavLink[] = [
   { href: "/", label: "CV" },
-  { href: "/contact", label: "Contact" },
 ];
 
 const navigationVariants = {
