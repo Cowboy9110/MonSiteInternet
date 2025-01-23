@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { CardContent } from "@/components/ui/card";
 import { Mail, MapPin, Car, Globe, Briefcase, GraduationCap, Award, Trophy } from "lucide-react";
-import { SiPython, SiJavascript, SiHtml5, SiCss3, SiLua } from "react-icons/si";
+import { SiPython, SiAdobepremierepro, SiHtml5, SiCss3, SiLua } from "react-icons/si";
 
 // Animation variants
 const sectionVariants = {
@@ -196,7 +196,7 @@ export default function CV() {
                 <h3 className="font-medium text-foreground mb-3">Technologies</h3>
                 <div className="flex flex-wrap gap-2">
                   <SkillBadge icon={SiPython} label="Python" />
-                  <SkillBadge icon={SiJavascript} label="JavaScript" />
+                  <SkillBadge icon={SiAdobepremierepro} label="Première Pro" />
                   <SkillBadge icon={SiHtml5} label="HTML" />
                   <SkillBadge icon={SiCss3} label="CSS" />
                   <SkillBadge icon={SiLua} label="Lua" />
