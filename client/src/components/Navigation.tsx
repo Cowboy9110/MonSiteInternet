@@ -93,8 +93,8 @@ export default function Navigation() {
 
           <motion.div variants={buttonVariants} className="flex flex-col items-center space-y-2 md:flex-row md:space-y-0 md:space-x-4">
             <a
-              href="/CV_Imad_Bouzalmata.pdf"
-              download="CV_Imad_Bouzalmata.pdf"
+              href="./CV_Imad_Bouzalmata.pdf"
+              download
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleDownloadCV}
