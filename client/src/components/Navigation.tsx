@@ -45,8 +45,12 @@ export default function Navigation() {
   const [location] = useLocation();
 
   const handleDownloadCV = (e: React.MouseEvent) => {
-    e.preventDefault();
-    window.open('/api/download-cv', '_blank');
+    const link = document.createElement('a');
+    link.href = '/CV_Imad_Bouzalmata.pdf';
+    link.download = 'CV_Imad_Bouzalmata.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
