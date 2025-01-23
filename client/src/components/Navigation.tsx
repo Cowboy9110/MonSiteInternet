@@ -124,8 +124,8 @@ export default function Navigation() {
               <DropdownMenuContent>
                 <DropdownMenuItem asChild>
                   <a
-                    href="/Lettre recommandation Imad GRTgaz.pdf"
-                    download="Lettre recommandation Imad GRTgaz.pdf"
+                    href="./Lettre recommandation Imad GRTgaz.pdf"
+                    download
                     className="w-full hover:bg-black hover:text-white transition-colors duration-200"
                   >
                     Recommandation GRTgaz
@@ -133,8 +133,8 @@ export default function Navigation() {
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <a
-                    href="/Lettre recommandation Imad Fiducial.pdf"
-                    download="Lettre recommandation Imad Fiducial.pdf"
+                    href="./Lettre recommandation Imad Fiducial.pdf"
+                    download
                     className="w-full hover:bg-black hover:text-white transition-colors duration-200"
                   >
                     Recommandation Fiducial
