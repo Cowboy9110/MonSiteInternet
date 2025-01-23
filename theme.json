@@ -9,7 +9,7 @@
   "foreground": "hsl(0 0% 95%)",
   "muted": "hsl(220 15% 20%)",
   "border": "hsl(220 15% 25%)",
-  "radius": 0.5,
+  "radius": 0.75,
   "hover": {
     "primary": "hsl(220 85% 65%)",
     "secondary": "hsl(220 85% 35%)",
