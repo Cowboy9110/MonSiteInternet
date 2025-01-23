@@ -97,8 +97,8 @@ export default function Navigation() {
 
           <motion.div variants={buttonVariants} className="flex flex-col items-center space-y-2 md:flex-row md:space-y-0 md:space-x-4">
             <a
-              href="./CV_Imad_Bouzalmata.pdf"
-              download
+              href="/CV_Imad_Bouzalmata.pdf"
+              download="CV_Imad_Bouzalmata.pdf"
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleDownloadCV}
@@ -128,8 +128,8 @@ export default function Navigation() {
               <DropdownMenuContent>
                 <DropdownMenuItem asChild>
                   <a
-                    href="./Lettre recommandation Imad GRTgaz.pdf"
-                    download
+                    href="/Lettre recommandation Imad GRTgaz.pdf"
+                    download="Lettre recommandation Imad GRTgaz.pdf"
                     className="w-full hover:bg-black hover:text-white transition-colors duration-200"
                   >
                     Recommandation GRTgaz
@@ -137,8 +137,8 @@ export default function Navigation() {
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <a
-                    href="./Lettre recommandation Imad Fiducial.pdf"
-                    download
+                    href="/Lettre recommandation Imad Fiducial.pdf"
+                    download="Lettre recommandation Imad Fiducial.pdf"
                     className="w-full hover:bg-black hover:text-white transition-colors duration-200"
                   >
                     Recommandation Fiducial
