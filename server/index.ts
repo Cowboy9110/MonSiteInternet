@@ -138,8 +138,8 @@ function gracefulShutdown(server: any) {
       serveStatic(app);
     }
 
-    // Use port 8080 for deployment compatibility
-    const PORT = 8080;
+    // Use port 3000 for development
+    const PORT = 3000;
 
     // Handle server shutdown gracefully
     process.on("SIGTERM", () => gracefulShutdown(server));
