@@ -6,10 +6,12 @@ import { setupVite, serveStatic, log } from "./vite";
 import { db } from "@db";
 import { sql } from "drizzle-orm";
 import { logger } from "./utils/logger";
+import compression from "compression";
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(compression()); // Added compression middleware
 
 // Ajout de CORS pour autoriser les requêtes cross-origin
 app.use(

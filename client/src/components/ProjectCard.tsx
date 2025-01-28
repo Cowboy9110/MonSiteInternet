@@ -16,6 +16,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <img
             src={project.thumbnail}
             alt={project.title}
+            loading="lazy"
+            decoding="async"
             className="object-cover w-full h-full"
           />
         </div>
