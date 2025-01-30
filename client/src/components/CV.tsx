@@ -108,7 +108,7 @@ export default function CV() {
                 className="flex justify-center"
               >
                 <Avatar className="w-48 h-48 ring-4 ring-primary/10">
-                  <AvatarImage src="Photo_PS.png" alt="Ma photo" className="object-cover" />
+                  <AvatarImage src="/Photo_PS.png" alt="Ma photo" className="object-cover" />
                   <AvatarFallback>IB</AvatarFallback>
                 </Avatar>
               </motion.div>
