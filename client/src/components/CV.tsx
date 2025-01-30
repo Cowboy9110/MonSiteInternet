@@ -182,46 +182,55 @@ export default function CV() {
             WebkitFontSmoothing: "subpixel-antialiased",
             textRendering: "optimizeLegibility"
           }} className="border-2 border-border/50 rounded-lg hover:border-primary/30 transition-colors p-6 bg-background shadow-lg hover:shadow-xl transform-gpu">
-          <CardContent className="pt-6">
-            <motion.h2
-              className="text-xl font-semibold mb-4 flex items-center gap-2 text-primary"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <Award className="w-5 h-5 text-primary" /> Compétences clés
-            </motion.h2>
-            <div className="grid gap-6">
-              <div>
-                <h3 className="font-medium text-foreground mb-3">Technologies</h3>
-                <div className="flex flex-wrap gap-2">
-                  <SkillBadge icon={SiPython} label="Python" />
-                  <SkillBadge icon={SiAdobepremierepro} label="Première Pro" />
-                  <SkillBadge icon={SiHtml5} label="HTML" />
-                  <SkillBadge icon={SiCss3} label="CSS" />
-                  <SkillBadge icon={SiLua} label="Lua" />
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-6">
+          <CardContent className="flex flex-col md:flex-row gap-6 pt-6">
+            <div className="w-48 h-48 rounded-full overflow-hidden flex-shrink-0 mx-auto md:mx-0">
+              <img 
+                src="/Photo_PS.png" 
+                alt="Photo de profil" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <motion.h2
+                className="text-xl font-semibold mb-4 flex items-center gap-2 text-primary"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <Award className="w-5 h-5 text-primary" /> Compétences clés
+              </motion.h2>
+              <div className="grid gap-6">
                 <div>
-                  <h3 className="font-medium text-foreground mb-2">Gestion de Projet</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Coordination d'équipes pluridisciplinaires
-                    <br />
-                    Planification et suivi budgétaire
-                    <br />
-                    Optimisation des processus
-                  </p>
+                  <h3 className="font-medium text-foreground mb-3">Technologies</h3>
+                  <div className="flex flex-wrap gap-2">
+                    <SkillBadge icon={SiPython} label="Python" />
+                    <SkillBadge icon={SiAdobepremierepro} label="Première Pro" />
+                    <SkillBadge icon={SiHtml5} label="HTML" />
+                    <SkillBadge icon={SiCss3} label="CSS" />
+                    <SkillBadge icon={SiLua} label="Lua" />
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-medium text-foreground mb-2">Numérique</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Montage vidéo avec Adobe Premiere Pro et After Effects
-                    <br />
-                    Création, hébergement, sécurisation et maintenance de serveurs
-                    <br />
-                    Intégration et optimisation de solutions web
-                  </p>
+                <div className="grid grid-cols-2 gap-6">
+                  <div>
+                    <h3 className="font-medium text-foreground mb-2">Gestion de Projet</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Coordination d'équipes pluridisciplinaires
+                      <br />
+                      Planification et suivi budgétaire
+                      <br />
+                      Optimisation des processus
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-foreground mb-2">Numérique</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Montage vidéo avec Adobe Premiere Pro et After Effects
+                      <br />
+                      Création, hébergement, sécurisation et maintenance de serveurs
+                      <br />
+                      Intégration et optimisation de solutions web
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
