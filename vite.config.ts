@@ -7,14 +7,14 @@ import { fileURLToPath } from 'url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
+  root: path.resolve(__dirname, 'client'),
+  publicDir: path.resolve(__dirname, 'client/public'),
   plugins: [react()],
   build: {
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true
-      }
+    outDir: path.resolve(__dirname, 'dist/client'),
+    minify: 'esbuild',
+    esbuild: {
+      drop: ['console', 'debugger']
     },
     rollupOptions: {
       output: {
@@ -29,7 +29,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './client/src')
+      '@': path.resolve(__dirname, 'client/src')
     }
   }
 })
