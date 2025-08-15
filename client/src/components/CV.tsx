@@ -35,9 +35,8 @@ const badgeVariants = {
   hover: {
     scale: 1.1,
     transition: {
-      type: "spring",
-      stiffness: 400,
-      damping: 10,
+      duration: 0.3,
+      ease: [0.22, 1, 0.36, 1],
     },
   },
 };
@@ -73,6 +72,19 @@ const SkillBadge: React.FC<SkillBadgeProps> = ({
     <Icon className="w-4 h-4" />
     <span className="text-sm font-medium">{label}</span>
   </motion.div>
+);
+
+const Presentation = () => (
+  <div className="presentation">
+    <Avatar>
+      <AvatarImage src="/client/public/Photo_PS.png" alt="Profile Photo" />
+      <AvatarFallback>IB</AvatarFallback>
+    </Avatar>
+    <div className="name">
+      <h1>Votre Prénom</h1>
+      <p>Votre Description</p>
+    </div>
+  </div>
 );
 
 export default function CV() {
